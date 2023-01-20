@@ -1,5 +1,51 @@
 ﻿@import '@nativescript/theme/css/core.css';
 @import '@nativescript/theme/css/default.css';
 
+Page>GridLayout {
+    margin: 16;
+}
+
+.progressbar-vertical {
+    transform: rotate(-90deg);
+    height: 30;
+    margin-top: 150;
+    border-radius: 8;
+    background-image: linear-gradient(-90deg, rgb(91, 153, 191), rgb(26, 214, 82),rgb(91, 153, 191));
+}
+
+.progressbar-horizontal{
+    height: 30;
+    margin-top: 150;
+    border-radius: 8;
+    background-image: linear-gradient(-90deg, rgb(91, 153, 191) 0%, rgb(26, 214, 82) 45%, #ffffff00 46%, #ffffff00 54%, rgb(26, 214, 82) 55%, rgb(91, 153, 191) 100%);
+ 
+}
+
+.progressbar-value {
+    border-radius: 8;
+    background-color: rgb(0, 255, 55);
+    border-width: 4px;
+    border-color: rgb(1, 162, 36);
+    margin: 7 0 7 7;
+}
+
+.middle-marker-horizontal {
+    background: rgb(255, 0, 0);
+    transform: rotate(90deg);
+    width: 2px;
+    height: 30;
+    margin-top: 150;
+    opacity: 0.5;
+}
+
+.middle-marker-vertical {
+    background: rgb(255, 0, 0);
+    width: 2px;
+    height: 30;
+    margin-top: 150;
+    opacity: 0.5;
+
+}
+
 /* Place any CSS rules you want to apply on both iOS and Android here.
 This is where the vast majority of your CSS code goes. */

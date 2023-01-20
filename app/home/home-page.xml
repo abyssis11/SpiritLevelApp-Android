@@ -1,9 +1,22 @@
-<Page navigatingTo="onNavigatingTo" xmlns="http://schemas.nativescript.org/tns.xsd">
-    <ActionBar>
-        <Label text="Home" />
-    </ActionBar>
+<Page navigatingTo="navigatingTo" xmlns="http://schemas.nativescript.org/tns.xsd">
+    <ActionBar title="Spirit Level" />
 
-    <GridLayout>
-        <!-- Add your page content here -->
+    <GridLayout rows="auto auto auto auto auto auto auto auto *" columns="auto * auto">
+        <GridLayout row="4" colSpan="3" columns="{{ y }}" class="progressbar-vertical">
+            <StackLayout col="0" class="progressbar-value"></StackLayout>
+        </GridLayout>
+
+        <GridLayout row="4" colSpan="3" columns="{{ x }}" class="progressbar-horizontal">
+            <StackLayout col="0" class="progressbar-value"></StackLayout>
+            
+        </GridLayout>
+
+        <StackLayout row="4" colSpan="3" class="middle-marker-horizontal"></StackLayout>
+        <StackLayout row="4" colSpan="3" class="middle-marker-vertical"></StackLayout>
+    
+        <TextField row="8" col="1" text="{{ inclanation }}" horizontalAlignment="center"/>
+
     </GridLayout>
+
+
 </Page>
