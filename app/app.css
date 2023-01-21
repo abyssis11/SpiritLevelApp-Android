@@ -47,5 +47,30 @@ Page>GridLayout {
 
 }
 
+.button-zaustavi {
+    margin-top: 20;
+    background-color: rgb(176, 38, 38);
+    border-color: rgb(101, 10, 10);
+    border-radius: 20;
+    border-width: 3;
+    color: whitesmoke;
+    font-size: 18;
+    font-weight: bold;
+}
+
+.button-pokreni {
+    margin-top: 20;
+    background-color: lightseagreen;
+    border-color: rgb(1, 162, 36);
+    border-radius: 20;
+    border-width: 3;
+    color: whitesmoke;
+    font-size: 18;
+    font-weight: bold;
+}
+
+
+
+  
 /* Place any CSS rules you want to apply on both iOS and Android here.
 This is where the vast majority of your CSS code goes. */

@@ -2,20 +2,29 @@
     <ActionBar title="Spirit Level" />
 
     <GridLayout rows="auto auto auto auto auto auto auto auto *" columns="auto * auto">
-        <GridLayout row="4" colSpan="3" columns="{{ y }}" class="progressbar-vertical">
+        <Label colSpan="3" row="1" opacity="0" id="shake-view" text="Umirite se!" class="h2" verticalAlignment="top" horizontalAlignment="center" />
+        
+        <GridLayout row="2" colSpan="3" columns="{{ y }}" class="progressbar-vertical">
             <StackLayout col="0" class="progressbar-value"></StackLayout>
         </GridLayout>
 
-        <GridLayout row="4" colSpan="3" columns="{{ x }}" class="progressbar-horizontal">
+        <GridLayout row="2" colSpan="3" columns="{{ x }}" class="progressbar-horizontal">
             <StackLayout col="0" class="progressbar-value"></StackLayout>
             
         </GridLayout>
 
-        <StackLayout row="4" colSpan="3" class="middle-marker-horizontal"></StackLayout>
-        <StackLayout row="4" colSpan="3" class="middle-marker-vertical"></StackLayout>
-    
-        <TextField row="8" col="1" text="{{ inclanation }}" horizontalAlignment="center"/>
+        <StackLayout row="2" colSpan="3" class="middle-marker-horizontal"></StackLayout>
+        <StackLayout row="2" colSpan="3" class="middle-marker-vertical"></StackLayout>
 
+        <TextField row="3" colSpan="3" style="margin-top: 22%" verticalAlignment="top"/>
+
+        <TextField row="4" colSpan="1" text= "Roll angle:" horizontalAlignment="left"/>
+        <TextField row="4" colSpan="2" text= "{{ roll }}" horizontalAlignment="center"/>
+
+        <TextField row="5" colSpan="3" text= "Pitch angle:" horizontalAlignment="left"/>
+        <TextField row="5" colSpan="3" text= "{{ pitch }}" horizontalAlignment="center"/>
+
+        <Button colSpan="3" row="6" class="{{ button }}" text="{{ isListening ? 'Zaustavi mjerenje' : 'Nastavi mjerenje'}}" tap="toggleUpdates" />
     </GridLayout>
 
 
