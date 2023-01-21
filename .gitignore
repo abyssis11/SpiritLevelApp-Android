@@ -1,6 +1,7 @@
 # NativeScript
 hooks/
-node_modules/
+node_modules/*
+!node_modules/nativescript-accelerometer
 platforms/
 
 # Logs
