@@ -6,7 +6,7 @@ Aplikacija koju sam razvio koristi akcelerometar senzor na uređaju u svrhu prik
 
 Libela je mjerni instrument koji služi za postavljanje osi u vertikalni ili horizontalni položaj. 
 
-(možda slika)
+![Slika 1](img/App1.jpg)
 
 ---
 
@@ -155,11 +155,12 @@ Kod u datoteci home/home-page.xml definira izgled stranice.
 
 Podijelili smo prikaz na više redova (row) i stupaca (col). Na vrhu stranice prikazuje se text "Umirite se!" ukoliko je detektiran veliki porast u drhtanju mobilnog uređaja.
 
-(slika)
+![Slika 2](img/App2.jpg)
 
 Zatim slijedi prikaze libela, odnosno horizontalna i vertikalna traka napredka. Njihove vrijednosti se ispunjavaju ovisno o položaju mobilnog uređaja (funkcionalnost je definirana u home/home-page.js, o sadržaju te datoteke nešto više kasnije). Također postavljamo nišan u sredinu kako bi korisnik aplikacije mogao intuitivnije koristiti aplikaciju. Ispod libela nalazi se prikaz kuta rotacije za roll i pitch, te na kraju se nalazi gumb koji zaustavlja mjerenje te mjenja boju ovisno o zaustavljenom/pokrenutom mjerenju. 
 
-(slika) (slika)
+![Slika 3](img/App3.jpg)
+![Slika 4](img/App4.jpg) 
 
 ---
 
@@ -211,7 +212,7 @@ function update(data) {
 
 U funkciji **update()** povezujemo vrijednosti iz .xml datoteke (x, y, roll i pitch) s vrijednostima dobivenim iz akcelerometra. Pošto se x i y vrijednosti pokazuju kao vrijednosti libela potrebno ih je pretvoriti u postotak, a vrijednosti kuta roll i pitch izračunavamo u funkciji **CalculateInclanation()**. Na slici u nastavku je vidiljo što zapravo roll i pitch predstavljaju.
 
-(slika)
+![Slika 5](img/RollPitch.png)
 
 ```js
 // Event handler za "navigatingTo" event u home-page.xml
@@ -326,3 +327,67 @@ U konstruktor klase Shake šaljemo funkciju koja će se izvoditi prilikom detekc
 
 Klasa ima funkciju **onSensorData()** u kojoj se vrši detekcija drhtanja. Izračunavamo vektor sile pomoću podataka iz akcelerometra (oni se prosljeđuju kao argument funkcije). Ukoliko vektor sile prelazi jačinu definiranu u parametrima na početku to se smatra drhtanjem te se pomoću ostalih parametra određuje ako se izvodi funcija koja je prosljeđena u konstruktoru. Ovaj dio koda je izveden na ovaj način pošto bi se u protivnom funkcija **callbackFunction()** izvodila prilikom svake detekcije te bi se tekst "Umirite se!" prikazivao preko prijašnjeg teksta. 
 
+---
+
+Zadnja uređena datoteka je app.css u kojoj se nalaze css stilovi kako bi poboljšali izgled korisničkog sučelja. To su stilovi za traku napretka (libel) i gumbe.
+
+---
+
+## PROFILIRANJE APLIKACIJE
+
+Kako bi aplikaciju mogli profilirati unutar Android studia potrebno ju je prvo izgraditi. To činimo naredbom u nastavku.
+
+```
+$ tns build android --copy-to <putanja mjesta spremanja>
+```
+
+Nakon što je aplikacija izgrađena možemo ju otvoriti u Android studiju (File -> Profile or Debug APK, zatim odaberemo .apk datoteku stvorenu izgradnjom).
+
+Priključimo mobilni uređaj, pokrenemo aplikaciju i pogledamo u karticu Profilera. Vidimo da se izvršava mjerenje (.trace datoteke se mogu naći u korijenu repozitorija). 
+
+---
+
+![Slika 6](img/Profiler1.png)
+
+Vidimo da pri pokretanju aplikacije iskorištenost CPU-a, memorije i energije poraste, no ubrzo se stabilizira. 
+
+---
+
+![Slika 7](img/Profiler2.png)
+
+Aplikacija u mirovanju torški gotovo konstantu vrijednost memorije (140 MB). Isto se dešava i s iskorištenosti CPU-a (5%). Također, aplikacija troši iznimno malo energije. 
+
+---
+
+![Slika 8](img/Profiler3.png)
+
+Prilikom drhtanja mobitela vidimo porast u iskorištenosti memorije (165 MB) te također porast u iskorištenosti CPU-a (10%). Potrošnja energije ostaje na istoj razini. 
+
+---
+
+![Slika 9](img/Profiler4.png)
+![Slika 10](img/Profiler5.png)
+
+Pogledom na procese i Flame Chart vidimo da niti jedan proces ne stvara probleme, odnosno ne odskače od ostalih. 
+
+---
+
+## Literatura
+
+https://hackmd.io/@mateaturalija/r1_zhHh_o
+
+https://v7.docs.nativescript.org/angular/tooling/android-virtual-devices
+
+https://v7.docs.nativescript.org/angular/start/ns-setup-linux
+
+https://docs.nativescript.org/environment-setup.html#linux-android
+
+https://developer.android.com/studio/install#linux
+
+https://blog.nativescript.org/nativescript-7-for-plugin-authors/
+
+https://github.com/triniwiz/native-script-accelerometer
+
+https://blog.nativescript.org/building-a-simple-progressbar-for-your-nativescript-app/
+
+https://hackmd.io/@mateaturalija/ByKLNv49o

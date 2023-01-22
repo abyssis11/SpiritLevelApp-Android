@@ -37,6 +37,7 @@ export class Shake {
       }
 
       const timeDelta = now - this.#lastTime;
+      // razmak izmedju dvije provjere shakea mora biti veći od 1000 ms
       if (timeDelta > Parameters.checkTimeout) {
           // izracun za vektor sile
           const forceVector = Math.abs(Math.sqrt(Math.pow(data.x, 2) + Math.pow(data.y, 2) + Math.pow(data.z, 2)) - 1);
