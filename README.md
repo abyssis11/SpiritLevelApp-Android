@@ -391,3 +391,5 @@ https://github.com/triniwiz/native-script-accelerometer
 https://blog.nativescript.org/building-a-simple-progressbar-for-your-nativescript-app/
 
 https://hackmd.io/@mateaturalija/ByKLNv49o
+
+Slika 5: https://www.mdpi.com/1424-8220/17/9/2043
