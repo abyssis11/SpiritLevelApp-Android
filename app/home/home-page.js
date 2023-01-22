@@ -38,7 +38,6 @@ function update(data) {
 
     context.set("x", xkoordinata);
     context.set("y", ykoordinata);
-    context.set("z", data.z.toFixed(2));
     context.set("roll", CalculateInclanation(data).roll.toFixed(2));
     context.set("pitch", CalculateInclanation(data).pitch.toFixed(2));
 
