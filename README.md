@@ -4,7 +4,9 @@ Zadatak ovog seminarskog rada i projekta bio je razviti mobilnu aplikaciju koja 
 
 Aplikacija koju sam razvio koristi akcelerometar senzor na uređaju u svrhu prikaza položaja uređaja u prostoru, odnosno koristi će se kao mjerni istrument Libela.
 
-Libela je mjerni instrument koji služi za postavljanje osi u vertikalni ili horizontalni položaj. 
+Libela je mjerni instrument koji služi za postavljanje osi u vertikalni ili horizontalni položaj.
+
+Poveznica na GitHub repozitorij: https://github.com/abyssis11/SpiritLevelApp-Android
 
 <img src="img/App1.jpg" alt="Slika 1" width="300">
 
