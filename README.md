@@ -6,7 +6,7 @@ Aplikacija koju sam razvio koristi akcelerometar senzor na uređaju u svrhu prik
 
 Libela je mjerni instrument koji služi za postavljanje osi u vertikalni ili horizontalni položaj. 
 
-![Slika 1](img/App1.jpg)
+<img src="img/App1.jpg" alt="Slika 1" width="500">
 
 ---
 
