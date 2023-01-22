@@ -2,7 +2,7 @@
 
 Zadatak ovog seminarskog rada i projekta bio je razviti mobilnu aplikaciju koja koristi senzore mobilnog uređaja. Prilikom razvoja koristio sam razvojni okvir **NativeScript** s JavaScript programskim jezikom. 
 
-Aplikacija koju sam razvio koristi akcelerometar senzor na uređaju u svrhu prikaza položaja uređaja u prostoru, odnosno koristi će se kao mjerni istrument Libela.
+U aplikaciji koju sam razvio koristio sam akcelerometar senzor na uređaju u svrhu prikaza položaja uređaja u prostoru, odnosno koristi će se kao mjerni instrument Libela.
 
 Libela je mjerni instrument koji služi za postavljanje osi u vertikalni ili horizontalni položaj.
 
@@ -36,7 +36,7 @@ $ ns platform add android
 
 ## Akcelerometar
 
-Za ovu aplikaciju potrebni dobiti očitanja akcelometra na uređaju. Kako bi mogli na jednostavan način pristupiti tim podatcima dodajemo plugin *nativescript-accelerometer* pomoću sljedeće naredbe:
+Za ovu aplikaciju potrebno je dobiti očitanja akcelometra na uređaju. Kako bi mogli na jednostavan način pristupiti tim podatcima dodajemo plugin *nativescript-accelerometer* pomoću sljedeće naredbe:
 
 ```
 $ tns plugin add nativescript-accelerometer
@@ -183,7 +183,7 @@ const shakeDetector = new Shake(() => {
     });
 });
 ```
-Ovim dijelom koda stvaramo novu instancu klase Shake (pohranjenu u **shakeDetector**) i definiramo funkciju koja će se izvoditi prilikom detektiranja drhtanja mobilnog uređaja (klasa Shake je definirana u home-view-model.js, dotaknuti ćemo se njenog sadržaja nešto kasnije). Animirati će se tekst koji će biti idetificiran pod **shakeView**.Animirani tekst će se povećati za dva puta te će postati ne proziran, prikazivati će se jednu sekundi prije nego što ponovno nestane. 
+Ovim dijelom koda stvaramo novu instancu klase Shake (pohranjenu u **shakeDetector**) i definiramo funkciju koja će se izvoditi prilikom detektiranja drhtanja mobilnog uređaja (klasa Shake je definirana u home-view-model.js, dotaknuti ćemo se njenog sadržaja nešto kasnije). Animirati će se tekst koji će biti identificiran pod **shakeView**.Animirani tekst će se povećati za dva puta te će postati ne proziran, prikazivati će se jednu sekundi prije nego što ponovno nestane. 
 
 ```js
 function CalculateInclanation(data) {
