@@ -6,7 +6,7 @@ Aplikacija koju sam razvio koristi akcelerometar senzor na uređaju u svrhu prik
 
 Libela je mjerni instrument koji služi za postavljanje osi u vertikalni ili horizontalni položaj. 
 
-<img src="img/App1.jpg" alt="Slika 1" width="500">
+<img src="img/App1.jpg" alt="Slika 1" width="300">
 
 ---
 
@@ -155,12 +155,12 @@ Kod u datoteci home/home-page.xml definira izgled stranice.
 
 Podijelili smo prikaz na više redova (row) i stupaca (col). Na vrhu stranice prikazuje se text "Umirite se!" ukoliko je detektiran veliki porast u drhtanju mobilnog uređaja.
 
-![Slika 2](img/App2.jpg)
+<img src="img/App2.jpg" alt="Slika 2" width="300">
 
 Zatim slijedi prikaze libela, odnosno horizontalna i vertikalna traka napredka. Njihove vrijednosti se ispunjavaju ovisno o položaju mobilnog uređaja (funkcionalnost je definirana u home/home-page.js, o sadržaju te datoteke nešto više kasnije). Također postavljamo nišan u sredinu kako bi korisnik aplikacije mogao intuitivnije koristiti aplikaciju. Ispod libela nalazi se prikaz kuta rotacije za roll i pitch, te na kraju se nalazi gumb koji zaustavlja mjerenje te mjenja boju ovisno o zaustavljenom/pokrenutom mjerenju. 
 
-![Slika 3](img/App3.jpg)
-![Slika 4](img/App4.jpg) 
+<img src="img/App3.jpg" alt="Slika 3" width="300">
+<img src="img/App4.jpg" alt="Slika 4" width="300">
 
 ---
 
