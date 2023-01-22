@@ -159,8 +159,10 @@ Podijelili smo prikaz na više redova (row) i stupaca (col). Na vrhu stranice pr
 
 Zatim slijedi prikaze libela, odnosno horizontalna i vertikalna traka napredka. Njihove vrijednosti se ispunjavaju ovisno o položaju mobilnog uređaja (funkcionalnost je definirana u home/home-page.js, o sadržaju te datoteke nešto više kasnije). Također postavljamo nišan u sredinu kako bi korisnik aplikacije mogao intuitivnije koristiti aplikaciju. Ispod libela nalazi se prikaz kuta rotacije za roll i pitch, te na kraju se nalazi gumb koji zaustavlja mjerenje te mjenja boju ovisno o zaustavljenom/pokrenutom mjerenju. 
 
-<img src="img/App3.jpg" alt="Slika 3" width="300">
-<img src="img/App4.jpg" alt="Slika 4" width="300">
+<p float="left">
+    <img src="img/App3.jpg" alt="Slika 3" width="300">
+    <img src="img/App4.jpg" alt="Slika 4" width="300">
+</p>
 
 ---
 
